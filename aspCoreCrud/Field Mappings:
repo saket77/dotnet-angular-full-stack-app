@@ -1,0 +1,42 @@
+Field Mappings:
+
+Orders
+--
+1. Order Date - Default mapping //
+2. Ship To & Bill To - Customer Id foreign key //*
+3. Ship To Address - Address Id foreign key  //*
+4. Ship To Email - Shipping address email //*?
+5. Bill To Email -  Billing address email //*?
+6. Ship To Type - Informational (Customer should not see it) //?
+7. Payment Information = Payment foreign key //*
+8. Pay Type  - Informational (Customer should not see it) //?
+9. Order Status - Mapped already //?
+10. Order Source - Ignore //?
+11. Tax Jurisdiction - Ignore //?
+14. SalesTax RateId - Ignore //?
+15. DateShipped - Shipped Date //
+16. Tracking # - Set it if available and show URL to FedEx //?
+17. Campaign Code name - Match with the code in nopCommerce and use nopCommerce's discount id //?
+19. Sub-Total / Shipping / Handling - Direct mapping //**
+20. Shipping Expense - Ignore //?
+21. LineCount - # of order lines //***
+22. CALC_AdjustedTotal - Ignore, it needs to be 
+23. GrandTotal - Set based on subtotal + tax //**
+24. Payment Total - Show this as the amount paid //*
+25. Balance - Show this as outstanding balance (informational real) //*
+
+
+
+
+
+Order Lines
+--
+1. Order Id - foreign key  //**
+2. Id - Primary key //**
+3. Sequence - Order Line sequence //?
+4. Product Id - Foreign key  //?
+5. Description - Add new column to import this in OrderLine, we won't display this to the customer //**
+6. Quantity - Default mapping //*
+7. Price - Default mapping //**
+8. Discount - Ignore //?
+9. Tax Jurisdiction - Ignore //?
